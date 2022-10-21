@@ -1,8 +1,12 @@
 import type { NextPage } from "next";
 import axios from "axios";
+import { z } from "zod";
 
-axios.get("/api/hello").then((res) => {
-  console.log(res.data);
+const response = z.object({ name: z.string() });
+type Response = z.infer<typeof response>;
+
+axios.get<Response>("/api/hello").then((res) => {
+  console.log(response.parse(res.data));
 });
 
 const Home: NextPage = () => {
