@@ -253,6 +253,11 @@
     "@typescript-eslint/types" "5.40.1"
     eslint-visitor-keys "^3.3.0"
 
+"@zodios/core@^10.1.0":
+  version "10.2.0"
+  resolved "https://registry.yarnpkg.com/@zodios/core/-/core-10.2.0.tgz#0721e42c558ee8180178ce763042e4c3619789a6"
+  integrity sha512-SQPz8gWPnkXoytnMr9E53t0XEpmlCAF5evtlIxF6j4Fcl//4NhqR6/lNGB7ZMhDiHflqCfhRrYlfBefMf398sg==
+
 acorn-jsx@^5.3.2:
   version "5.3.2"
   resolved "https://registry.yarnpkg.com/acorn-jsx/-/acorn-jsx-5.3.2.tgz#7ed5bb55908b3b2f1bc55c6af1653bada7f07937"

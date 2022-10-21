@@ -1,12 +1,19 @@
-import type { NextPage } from "next";
+import { makeApi, makeEndpoint, Zodios } from "@zodios/core";
 import axios from "axios";
+import type { NextPage } from "next";
 import { z } from "zod";
 
 const response = z.object({ name: z.string() });
-type Response = z.infer<typeof response>;
 
-axios.get<Response>("/api/hello").then((res) => {
-  console.log(response.parse(res.data));
+const helloEndpoint = makeEndpoint({
+  alias: "hello",
+  method: "get",
+  path: "api/hello",
+  response: response,
+});
+const apiClient = new Zodios("/", [...makeApi([helloEndpoint])]);
+apiClient.hello().then((res) => {
+  console.log("zodios", res);
 });
 
 const Home: NextPage = () => {
