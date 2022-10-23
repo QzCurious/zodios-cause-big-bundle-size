@@ -277,6 +277,11 @@
   resolved "https://registry.yarnpkg.com/@zodios/core/-/core-10.3.0.tgz#be3ed7a4e6ef733fbb3914114e2932ed586bc31e"
   integrity sha512-nyE5Qsl2P1ie1hYvtEWcjwpda4rcGwsfF1NBHRAMzmui4XUVjS4hmI+ygkWZ6rNo5aemTfmYygbTy7NISb5CAA==
 
+"@zodios/react@^10.3.1":
+  version "10.3.1"
+  resolved "https://registry.yarnpkg.com/@zodios/react/-/react-10.3.1.tgz#81ec5dc52843859d2366fbd3ab7c843b8cab7a17"
+  integrity sha512-f4ljrrEJEQDLDhFRdryfcCk/vNrc4htLzMQWGagk7xS6QvSBR/dKExz0IOn8zzfV9h4M2VXzGff9fue+oOuimA==
+
 acorn-jsx@^5.3.2:
   version "5.3.2"
   resolved "https://registry.yarnpkg.com/acorn-jsx/-/acorn-jsx-5.3.2.tgz#7ed5bb55908b3b2f1bc55c6af1653bada7f07937"
