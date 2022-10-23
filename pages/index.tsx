@@ -1,3 +1,4 @@
+import { useQuery } from "@tanstack/react-query";
 import { makeApi, makeEndpoint, Zodios } from "@zodios/core";
 import axios from "axios";
 import type { NextPage } from "next";
@@ -12,11 +13,12 @@ const helloEndpoint = makeEndpoint({
   response: response,
 });
 const apiClient = new Zodios("/", [...makeApi([helloEndpoint])]);
-apiClient.hello().then((res) => {
-  console.log("zodios", res);
-});
+// apiClient.hello().then((res) => {
+//   console.log("zodios", res);
+// });
 
 const Home: NextPage = () => {
+  const query = useQuery(["hello"], () => apiClient.hello());
   return <div>hello world</div>;
 };
 
